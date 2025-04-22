@@ -1,0 +1,23 @@
+type Message {
+    id: ID!
+    content: String!
+    author: String!
+}
+
+type Query {
+    messages: [Message]!
+}
+
+type Mutation {
+    createMessage(content: String!, author: String!): Message!
+}
+
+type Subscription {
+    messageAdded: Message!
+}
+
+schema {
+    query: Query
+    mutation: Mutation
+    subscription: Subscription
+}

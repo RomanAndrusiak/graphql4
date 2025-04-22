@@ -1,0 +1,19 @@
+go http://localhost:8080/graphiql
+then add
+subscription MySubscription {
+  messageAdded {
+    id
+    content
+    author
+  }
+}
+and run
+then in new window add
+mutation {
+  createMessage(content: "Привіт, світе!", author: "Користувач") {
+    id
+    content
+    author
+  }
+}
+and run and imn previous window will be info about connection
